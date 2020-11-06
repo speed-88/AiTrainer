@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PoseNet - compare Images Demo</title>
+  <link rel="stylesheet" type="css/text" href="/style/bootstrap.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+
+    <p id='title'></p>
+    <p id='info'></p>
+    <div class="row">
+      <div class="col-md-5">
+        <video autoplay="true" playsinline id="videoElement" style="display: none;">
+
+        </video> 
+        <img id='imgt' style="display:none" src='/poses/1.svg' />
+
+      </div>
+      <div class="col-md-5">
+        <img id='man-standing' style="width: 40%;" src='/assets/man-standing.jpg ' />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        
+        
+    <canvas id="output" style="width:640px ;height:480px ;" ></canvas></div></div>
+    <div class="row">
+      <div class="col-md-5">
+        <input type="button" role="button" onclick="changeimage()">change</input>
+        <p id="text"></p>
+      </div>
+      <div class="col-md-5">
+        <p id="text2"></p>
+      </div>
+    </div>
+  </div>
+  <script src="multipose.js"></script>
+</body>
+
+</html>
