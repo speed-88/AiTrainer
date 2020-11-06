@@ -32,7 +32,7 @@ function compareSegment(Segment1, Segment2) {
 ///compare between poses
 function comparePose(pose1, pose2) {
 
-//convet pose to 3 point traingle
+//convert pose to 3 point traingle
   var headLeftHand = [pose1.keypoints[0], pose1.keypoints[7], pose1.keypoints[9]];
   var headLeftHand2 = [pose2.keypoints[0], pose2.keypoints[7], pose2.keypoints[9]];
   var headRightHand = [pose1.keypoints[0], pose1.keypoints[8], pose1.keypoints[10]];
