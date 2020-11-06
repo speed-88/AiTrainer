@@ -18,13 +18,15 @@ The [coco images](http://cocodataset.org/#home) demo shows how to estimate poses
 
 ## Setup
 
-```npm update
+```sh
+npm update
 
 ```
 
 Install dependencies and prepare the build directory:
 
-```npm install
+```sh
+npm install
 ```
 
 To watch files for changes, and launch a dev server:
