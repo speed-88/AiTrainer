@@ -8,9 +8,14 @@ var flipHorizontal = false;
 //pose array
 
 ///test pose
-var tpose = JSON.parse('{"score":0.97213354882072,"keypoints":[{"score":0.9993090629577637,"part":"nose","position":{"x":193.77762796721106,"y":56.90047342025816}},{"score":0.99802565574646,"part":"leftEye","position":{"x":184.72327975262002,"y":47.992042066522146}},{"score":0.9976713061332703,"part":"rightEye","position":{"x":202.26343111862005,"y":47.977399269430556}},{"score":0.9319990873336792,"part":"leftEar","position":{"x":168.72797301771112,"y":51.74844645340619}},{"score":0.7573493719100952,"part":"rightEar","position":{"x":213.9524927399038,"y":51.71345365650459}},{"score":0.9971332550048828,"part":"leftShoulder","position":{"x":143.87734676613417,"y":107.1624087916274}},{"score":0.9989559650421143,"part":"rightShoulder","position":{"x":231.67268015345712,"y":114.46204723551115}},{"score":0.9971444010734558,"part":"leftElbow","position":{"x":126.69820448582277,"y":174.0456221168607}},{"score":0.9917954802513123,"part":"rightElbow","position":{"x":246.48250045479503,"y":183.79920929786297}},{"score":0.983135461807251,"part":"leftWrist","position":{"x":144.80948879375535,"y":229.98857312629195}},{"score":0.9847016334533691,"part":"rightWrist","position":{"x":226.34154581745312,"y":229.22740001158954}},{"score":0.993244469165802,"part":"leftHip","position":{"x":152.3417924814187,"y":240.27131967507447}},{"score":0.9938841462135315,"part":"rightHip","position":{"x":206.75127393076858,"y":241.49166656375394}},{"score":0.992429792881012,"part":"leftKnee","position":{"x":143.40989257575012,"y":345.4041833543592}},{"score":0.9924444556236267,"part":"rightKnee","position":{"x":203.08142389675987,"y":345.3902901378587}},{"score":0.9711503982543945,"part":"leftAnkle","position":{"x":141.60533795189764,"y":442.3333550241671}},{"score":0.9458963871002197,"part":"rightAnkle","position":{"x":200.75194632682354,"y":449.7338083467595}}]}');
+var tpose1 = JSON.parse('{"score":0.42879462768049803,"keypoints":[{"score":0.4836989641189575,"part":"nose","position":{"x":377.4606114250213,"y":269.7538015165218}},{"score":0.42900940775871277,"part":"leftEye","position":{"x":370.72835413120134,"y":257.218310285635}},{"score":0.24493327736854553,"part":"rightEye","position":{"x":377.61290245204583,"y":260.6596386386263}},{"score":0.4664199650287628,"part":"leftEar","position":{"x":366.44435944909713,"y":253.54676599168593}},{"score":0.16566136479377747,"part":"rightEar","position":{"x":379.9308199752629,"y":263.284126014561}},{"score":0.7365760207176208,"part":"leftShoulder","position":{"x":323.3535011380563,"y":259.6972395010032}},{"score":0.4822319447994232,"part":"rightShoulder","position":{"x":333.0085759144349,"y":274.5031334546754}},{"score":0.5717718005180359,"part":"leftElbow","position":{"x":298.95982901131595,"y":181.58268316246657}},{"score":0.5321432948112488,"part":"rightElbow","position":{"x":295.26393418367735,"y":183.1999337162953}},{"score":0.5274068117141724,"part":"leftWrist","position":{"x":345.3929784158788,"y":175.91359357425677}},{"score":0.6557647585868835,"part":"rightWrist","position":{"x":351.0246044114406,"y":174.0669606724602}},{"score":0.3133663833141327,"part":"leftHip","position":{"x":202.87488339197773,"y":225.4041055760959}},{"score":0.18704721331596375,"part":"rightHip","position":{"x":225.17509893870073,"y":251.62571888489484}},{"score":0.3828336000442505,"part":"leftKnee","position":{"x":291.47220822345423,"y":309.668349922863}},{"score":0.41506779193878174,"part":"rightKnee","position":{"x":313.68548963969783,"y":298.9574494714403}},{"score":0.2907807230949402,"part":"leftAnkle","position":{"x":184.20730578945768,"y":226.45940224020399}},{"score":0.4047953486442566,"part":"rightAnkle","position":{"x":232.75194623776446,"y":242.31285006155764}}]}');
+var tpose2 = JSON.parse('{"score":0.2522931502145879,"keypoints":[{"score":0.31941163539886475,"part":"nose","position":{"x":375.7242692880593,"y":270.40935828064204}},{"score":0.5990493893623352,"part":"leftEye","position":{"x":377.82639844129983,"y":264.9706128784655}},{"score":0.24411547183990479,"part":"rightEye","position":{"x":384.7566981927894,"y":266.7760310191589}},{"score":0.3872949779033661,"part":"leftEar","position":{"x":365.4891580663302,"y":249.73102614109618}},{"score":0.10343419760465622,"part":"rightEar","position":{"x":394.52826758952455,"y":274.06924830336516}},{"score":0.10926605015993118,"part":"leftShoulder","position":{"x":342.12872445073106,"y":250.83253912424763}},{"score":0.1563098430633545,"part":"rightShoulder","position":{"x":351.1694251628237,"y":276.12123363212856}},{"score":0.2138778120279312,"part":"leftElbow","position":{"x":185.65099266438165,"y":230.74352516738358}},{"score":0.2954263985157013,"part":"rightElbow","position":{"x":44.222740321771596,"y":182.7049878784655}},{"score":0.3656275272369385,"part":"leftWrist","position":{"x":251.1035600357946,"y":243.75655296711608}},{"score":0.37998703122138977,"part":"rightWrist","position":{"x":478.9812886872644,"y":205.50531112730272}},{"score":0.15081241726875305,"part":"leftHip","position":{"x":234.26834807043406,"y":336.9463339482764}},{"score":0.07317455112934113,"part":"rightHip","position":{"x":345.8011343989391,"y":319.67829485347767}},{"score":0.24901287257671356,"part":"leftKnee","position":{"x":227.36138892266536,"y":229.03599008048093}},{"score":0.2265343815088272,"part":"rightKnee","position":{"x":222.74956776659775,"y":234.45141090957108}},{"score":0.2662019729614258,"part":"leftAnkle","position":{"x":339.5104248996838,"y":262.85299813237174}},{"score":0.1494470238685608,"part":"rightAnkle","position":{"x":347.3034292733159,"y":261.2160940207396}}]}');
 
 //
+var currentpose=tpose1;
+var currentposeno=1;
+
+var posematch=false;
 
 ////find angle 
 function findAngle(p1, p2, center) {
@@ -54,9 +59,9 @@ function comparePose(pose1, pose2) {
 
   var legLeft = compareSegment(leftLeg, leftLeg2);
   var legRight = compareSegment(rightLeg, rightLeg2);
-
+console.log("hl"+headLeft+"hr"+headRight+"armLeft"+armLeft+"armRight"+armRight+"legLeft"+legLeft+"legRight"+legRight);
   //test result to variable
-  var pose = { "HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
+  var pose = { "fullmatch":headLeft < 1 && headRight < 1&&armLeft < 1&&armRight < 1&&legLeft<1&&legRight<1,"HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
   //return result
   return pose;
 }
@@ -154,8 +159,9 @@ function detectPoseInRealTime(video, net) {
 
    
     //imgt.src='assets\man-standing2.jpg';
-    if (pose[0].score>=0.15) {
-      let s = JSON.stringify(comparePose(tpose, poses[0]));
+    if (pose[0].score>=0.75) {
+      let s = JSON.stringify(comparePose(currentpose, poses[0]));
+      console.log(s);
       ctx.fillText(JSON.stringify(s), 10, 20,400);
     
     }
