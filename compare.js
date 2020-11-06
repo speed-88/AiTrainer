@@ -13,7 +13,7 @@ function findAngle(p1, p2, center) {
 }
 ///compare segments
 function compareSegment(Segment1, Segment2) {
-
+//turn lines int angles
   var angle1 = findAngle(Segment1[0].position, Segment1[1].position, Segment1[2].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
   var angle2 = findAngle(Segment1[2].position, Segment1[1].position, Segment1[0].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
 
@@ -23,7 +23,7 @@ function compareSegment(Segment1, Segment2) {
 ///compare between poses
 function comparePose(pose1, pose2) {
 
-
+//generate lines from poses
   var headLeftHand = [pose1.keypoints[0], pose1.keypoints[7], pose1.keypoints[9]];
   var headLeftHand2 = [pose2.keypoints[0], pose2.keypoints[7], pose2.keypoints[9]];
   var headRightHand = [pose1.keypoints[0], pose1.keypoints[8], pose1.keypoints[10]];
@@ -36,7 +36,7 @@ function comparePose(pose1, pose2) {
   var leftLeg2 = [pose2.keypoints[11], pose2.keypoints[13], pose2.keypoints[15]];
   var rightLeg = [pose1.keypoints[12], pose1.keypoints[14], pose1.keypoints[16]];
   var rightLeg2 = [pose2.keypoints[12], pose2.keypoints[14], pose2.keypoints[16]];
-
+  ///compare petween lines
   var headLeft = compareSegment(headLeftHand, headLeftHand2);
   var headRight = compareSegment(headRightHand, headRightHand2);
 
@@ -45,7 +45,9 @@ function comparePose(pose1, pose2) {
 
   var legLeft = compareSegment(leftLeg, leftLeg2);
   var legRight = compareSegment(rightLeg, rightLeg2);
+  //result into array
   var pose = { "HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
+ //return result
   return pose;
 }
 
