@@ -38093,6 +38093,7 @@ function findAngle(p1, p2, center) {
 
 
 function compareSegment(Segment1, Segment2) {
+  //turn lines int angles
   var angle1 = findAngle(Segment1[0].position, Segment1[1].position, Segment1[2].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
   var angle2 = findAngle(Segment1[2].position, Segment1[1].position, Segment1[0].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
   return angle1 + angle2;
@@ -38100,6 +38101,7 @@ function compareSegment(Segment1, Segment2) {
 
 
 function comparePose(pose1, pose2) {
+  //generate lines from poses
   var headLeftHand = [pose1.keypoints[0], pose1.keypoints[7], pose1.keypoints[9]];
   var headLeftHand2 = [pose2.keypoints[0], pose2.keypoints[7], pose2.keypoints[9]];
   var headRightHand = [pose1.keypoints[0], pose1.keypoints[8], pose1.keypoints[10]];
@@ -38111,13 +38113,15 @@ function comparePose(pose1, pose2) {
   var leftLeg = [pose1.keypoints[11], pose1.keypoints[13], pose1.keypoints[15]];
   var leftLeg2 = [pose2.keypoints[11], pose2.keypoints[13], pose2.keypoints[15]];
   var rightLeg = [pose1.keypoints[12], pose1.keypoints[14], pose1.keypoints[16]];
-  var rightLeg2 = [pose2.keypoints[12], pose2.keypoints[14], pose2.keypoints[16]];
+  var rightLeg2 = [pose2.keypoints[12], pose2.keypoints[14], pose2.keypoints[16]]; ///compare petween lines
+
   var headLeft = compareSegment(headLeftHand, headLeftHand2);
   var headRight = compareSegment(headRightHand, headRightHand2);
   var armLeft = compareSegment(leftArm, leftArm2);
   var armRight = compareSegment(rightArm, rightArm2);
   var legLeft = compareSegment(leftLeg, leftLeg2);
-  var legRight = compareSegment(rightLeg, rightLeg2);
+  var legRight = compareSegment(rightLeg, rightLeg2); //result into array
+
   var pose = {
     "HeadLeft": headLeft < 1,
     "HeadRight": headRight < 1,
@@ -38125,7 +38129,8 @@ function comparePose(pose1, pose2) {
     "RightArm": armRight < 1,
     "LeftLeg": legLeft < 1,
     "RightLeg": legRight < 1
-  };
+  }; //return result
+
   return pose;
 }
 
