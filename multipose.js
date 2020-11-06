@@ -4,8 +4,12 @@ import { isMobile } from './demo_util';
 
 
 var flipHorizontal = false;
+
+//pose array
+
 ///test pose
 var tpose = JSON.parse('{"score":0.97213354882072,"keypoints":[{"score":0.9993090629577637,"part":"nose","position":{"x":193.77762796721106,"y":56.90047342025816}},{"score":0.99802565574646,"part":"leftEye","position":{"x":184.72327975262002,"y":47.992042066522146}},{"score":0.9976713061332703,"part":"rightEye","position":{"x":202.26343111862005,"y":47.977399269430556}},{"score":0.9319990873336792,"part":"leftEar","position":{"x":168.72797301771112,"y":51.74844645340619}},{"score":0.7573493719100952,"part":"rightEar","position":{"x":213.9524927399038,"y":51.71345365650459}},{"score":0.9971332550048828,"part":"leftShoulder","position":{"x":143.87734676613417,"y":107.1624087916274}},{"score":0.9989559650421143,"part":"rightShoulder","position":{"x":231.67268015345712,"y":114.46204723551115}},{"score":0.9971444010734558,"part":"leftElbow","position":{"x":126.69820448582277,"y":174.0456221168607}},{"score":0.9917954802513123,"part":"rightElbow","position":{"x":246.48250045479503,"y":183.79920929786297}},{"score":0.983135461807251,"part":"leftWrist","position":{"x":144.80948879375535,"y":229.98857312629195}},{"score":0.9847016334533691,"part":"rightWrist","position":{"x":226.34154581745312,"y":229.22740001158954}},{"score":0.993244469165802,"part":"leftHip","position":{"x":152.3417924814187,"y":240.27131967507447}},{"score":0.9938841462135315,"part":"rightHip","position":{"x":206.75127393076858,"y":241.49166656375394}},{"score":0.992429792881012,"part":"leftKnee","position":{"x":143.40989257575012,"y":345.4041833543592}},{"score":0.9924444556236267,"part":"rightKnee","position":{"x":203.08142389675987,"y":345.3902901378587}},{"score":0.9711503982543945,"part":"leftAnkle","position":{"x":141.60533795189764,"y":442.3333550241671}},{"score":0.9458963871002197,"part":"rightAnkle","position":{"x":200.75194632682354,"y":449.7338083467595}}]}');
+
 //
 
 ////find angle 
@@ -28,7 +32,7 @@ function compareSegment(Segment1, Segment2) {
 ///compare between poses
 function comparePose(pose1, pose2) {
 
-
+//convet pose to 3 point traingle
   var headLeftHand = [pose1.keypoints[0], pose1.keypoints[7], pose1.keypoints[9]];
   var headLeftHand2 = [pose2.keypoints[0], pose2.keypoints[7], pose2.keypoints[9]];
   var headRightHand = [pose1.keypoints[0], pose1.keypoints[8], pose1.keypoints[10]];
@@ -41,7 +45,7 @@ function comparePose(pose1, pose2) {
   var leftLeg2 = [pose2.keypoints[11], pose2.keypoints[13], pose2.keypoints[15]];
   var rightLeg = [pose1.keypoints[12], pose1.keypoints[14], pose1.keypoints[16]];
   var rightLeg2 = [pose2.keypoints[12], pose2.keypoints[14], pose2.keypoints[16]];
-
+//compare traingls
   var headLeft = compareSegment(headLeftHand, headLeftHand2);
   var headRight = compareSegment(headRightHand, headRightHand2);
 
@@ -50,7 +54,10 @@ function comparePose(pose1, pose2) {
 
   var legLeft = compareSegment(leftLeg, leftLeg2);
   var legRight = compareSegment(rightLeg, rightLeg2);
+
+  //test result to variable
   var pose = { "HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
+  //return result
   return pose;
 }
 
