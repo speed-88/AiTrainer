@@ -38188,9 +38188,9 @@ function comparePose(pose1, pose2) {
   return pose;
 }
 
-var imageElement = document.getElementById('man-standing');
 var textElement = document.getElementById('text');
-var imageElement2 = document.getElementById('imgt');
+var imageElement1 = document.getElementById('1');
+var imageElement2 = document.getElementById('2');
 var textElement2 = document.getElementById('text2');
 var textElement3 = document.getElementById('title');
 let img = document.createElement("img");
@@ -38272,7 +38272,13 @@ function detectPoseInRealTime(video, net) {
     ctx.scale(-1, 1);
     ctx.translate(-videoWidth, 0);
     ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
-    ctx.drawImage(imageElement2, 0, 0, 100, 200);
+
+    if (currentposeno == 1) {
+      ctx.drawImage(imageElement1, 0, 0, 100, 200);
+    } else if (currentposeno == 2) {
+      ctx.drawImage(imageElement2, 0, 0, 100, 200);
+    }
+
     ctx.scale(-1, 1);
     ctx.translate(-videoWidth, 0); //imgt.src='assets\man-standing2.jpg';
 
