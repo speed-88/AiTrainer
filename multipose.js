@@ -197,7 +197,7 @@ function detectPoseInRealTime(video, net) {
 
 
     //imgt.src='assets\man-standing2.jpg';
-    if (pose[0].score >= 0.75) {
+    if (pose[0].score >= 0.85) {
       let s = comparePose(currentpose, poses[0]);
 
 

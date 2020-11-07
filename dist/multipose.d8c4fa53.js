@@ -38282,7 +38282,7 @@ function detectPoseInRealTime(video, net) {
     ctx.scale(-1, 1);
     ctx.translate(-videoWidth, 0); //imgt.src='assets\man-standing2.jpg';
 
-    if (pose[0].score >= 0.75) {
+    if (pose[0].score >= 0.85) {
       let s = comparePose(currentpose, poses[0]);
       console.log(s);
 
