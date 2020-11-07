@@ -38169,11 +38169,13 @@ function comparePose(pose1, pose2) {
   let ar = -errorMargin < armRight && armRight < errorMargin;
   let ll = -errorMargin < legLeft && legLeft < errorMargin;
   let lr = -errorMargin < legRight && legRight < errorMargin;
-  let t = false; //var pose = { "fullmatch":headLeft <1 && headRight <1&&armLeft <1&&armRight <1&&legLeft<1&&legRight<1,"HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
+  let match = hl && hr && al && ar && ll && lr; //var pose = { "fullmatch":headLeft <1 && headRight <1&&armLeft <1&&armRight <1&&legLeft<1&&legRight<1,"HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
 
+  console.log("match : " + match);
   var pose = {
-    "fullmatch": hl == hr == al == ar == ll == lr,
+    "fullmatch": match,
     "hl": hl,
+    "hr": hr,
     "HeadRight": headRight,
     "HeadLeft": headLeft,
     "LeftArm": armLeft,
