@@ -38090,42 +38090,69 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var flipHorizontal = false; //pose array
 ///test pose
 
-var tpose1 = JSON.parse('{"score":0.42879462768049803,"keypoints":[{"score":0.4836989641189575,"part":"nose","position":{"x":377.4606114250213,"y":269.7538015165218}},{"score":0.42900940775871277,"part":"leftEye","position":{"x":370.72835413120134,"y":257.218310285635}},{"score":0.24493327736854553,"part":"rightEye","position":{"x":377.61290245204583,"y":260.6596386386263}},{"score":0.4664199650287628,"part":"leftEar","position":{"x":366.44435944909713,"y":253.54676599168593}},{"score":0.16566136479377747,"part":"rightEar","position":{"x":379.9308199752629,"y":263.284126014561}},{"score":0.7365760207176208,"part":"leftShoulder","position":{"x":323.3535011380563,"y":259.6972395010032}},{"score":0.4822319447994232,"part":"rightShoulder","position":{"x":333.0085759144349,"y":274.5031334546754}},{"score":0.5717718005180359,"part":"leftElbow","position":{"x":298.95982901131595,"y":181.58268316246657}},{"score":0.5321432948112488,"part":"rightElbow","position":{"x":295.26393418367735,"y":183.1999337162953}},{"score":0.5274068117141724,"part":"leftWrist","position":{"x":345.3929784158788,"y":175.91359357425677}},{"score":0.6557647585868835,"part":"rightWrist","position":{"x":351.0246044114406,"y":174.0669606724602}},{"score":0.3133663833141327,"part":"leftHip","position":{"x":202.87488339197773,"y":225.4041055760959}},{"score":0.18704721331596375,"part":"rightHip","position":{"x":225.17509893870073,"y":251.62571888489484}},{"score":0.3828336000442505,"part":"leftKnee","position":{"x":291.47220822345423,"y":309.668349922863}},{"score":0.41506779193878174,"part":"rightKnee","position":{"x":313.68548963969783,"y":298.9574494714403}},{"score":0.2907807230949402,"part":"leftAnkle","position":{"x":184.20730578945768,"y":226.45940224020399}},{"score":0.4047953486442566,"part":"rightAnkle","position":{"x":232.75194623776446,"y":242.31285006155764}}]}');
-var tpose2 = JSON.parse('{"score":0.2522931502145879,"keypoints":[{"score":0.31941163539886475,"part":"nose","position":{"x":375.7242692880593,"y":270.40935828064204}},{"score":0.5990493893623352,"part":"leftEye","position":{"x":377.82639844129983,"y":264.9706128784655}},{"score":0.24411547183990479,"part":"rightEye","position":{"x":384.7566981927894,"y":266.7760310191589}},{"score":0.3872949779033661,"part":"leftEar","position":{"x":365.4891580663302,"y":249.73102614109618}},{"score":0.10343419760465622,"part":"rightEar","position":{"x":394.52826758952455,"y":274.06924830336516}},{"score":0.10926605015993118,"part":"leftShoulder","position":{"x":342.12872445073106,"y":250.83253912424763}},{"score":0.1563098430633545,"part":"rightShoulder","position":{"x":351.1694251628237,"y":276.12123363212856}},{"score":0.2138778120279312,"part":"leftElbow","position":{"x":185.65099266438165,"y":230.74352516738358}},{"score":0.2954263985157013,"part":"rightElbow","position":{"x":44.222740321771596,"y":182.7049878784655}},{"score":0.3656275272369385,"part":"leftWrist","position":{"x":251.1035600357946,"y":243.75655296711608}},{"score":0.37998703122138977,"part":"rightWrist","position":{"x":478.9812886872644,"y":205.50531112730272}},{"score":0.15081241726875305,"part":"leftHip","position":{"x":234.26834807043406,"y":336.9463339482764}},{"score":0.07317455112934113,"part":"rightHip","position":{"x":345.8011343989391,"y":319.67829485347767}},{"score":0.24901287257671356,"part":"leftKnee","position":{"x":227.36138892266536,"y":229.03599008048093}},{"score":0.2265343815088272,"part":"rightKnee","position":{"x":222.74956776659775,"y":234.45141090957108}},{"score":0.2662019729614258,"part":"leftAnkle","position":{"x":339.5104248996838,"y":262.85299813237174}},{"score":0.1494470238685608,"part":"rightAnkle","position":{"x":347.3034292733159,"y":261.2160940207396}}]}'); //
+var tpose1 = JSON.parse('{"score":0.9318080614594852,"keypoints":[{"score":0.992267906665802,"part":"nose","position":{"x":296.32710289862365,"y":43.008438763451494}},{"score":0.9845361113548279,"part":"leftEye","position":{"x":293.12815720376335,"y":37.08043902207905}},{"score":0.9858882427215576,"part":"rightEye","position":{"x":303.4111963116241,"y":40.74850918068498}},{"score":0.8445159196853638,"part":"leftEar","position":{"x":280.6887049099814,"y":39.81106312080118}},{"score":0.8684641718864441,"part":"rightEar","position":{"x":313.0609512922829,"y":41.71525098748708}},{"score":0.9980620741844177,"part":"leftShoulder","position":{"x":270.58484801058637,"y":72.29985019668996}},{"score":0.9981661438941956,"part":"rightShoulder","position":{"x":329.93653258089887,"y":78.57520614802144}},{"score":0.9847804307937622,"part":"leftElbow","position":{"x":245.14946696359357,"y":116.85452418939613}},{"score":0.9716399908065796,"part":"rightElbow","position":{"x":349.5871811506813,"y":116.06887363181505}},{"score":0.7453163266181946,"part":"leftWrist","position":{"x":196.74097493093763,"y":95.34505869349618}},{"score":0.7180130481719971,"part":"rightWrist","position":{"x":368.3799210782181,"y":123.26665309802104}},{"score":0.9996036291122437,"part":"leftHip","position":{"x":278.99008683379054,"y":173.70846979163503}},{"score":0.9987923502922058,"part":"rightHip","position":{"x":315.1328314398977,"y":173.84866831738663}},{"score":0.9979863166809082,"part":"leftKnee","position":{"x":268.2820096145808,"y":254.941936329645}},{"score":0.9956484436988831,"part":"rightKnee","position":{"x":316.7260419199903,"y":255.30658095541634}},{"score":0.8795462250709534,"part":"leftAnkle","position":{"x":265.8295880625684,"y":300.6411605419352}},{"score":0.8775097131729126,"part":"rightAnkle","position":{"x":327.9534317491583,"y":308.5908344432074}}]}');
+var tpose2 = JSON.parse('{"score":0.9663131096783806,"keypoints":[{"score":0.9926441311836243,"part":"nose","position":{"x":299.4824082786471,"y":46.4631959195267}},{"score":0.9867580533027649,"part":"leftEye","position":{"x":294.7039186945221,"y":40.284005666057425}},{"score":0.988735020160675,"part":"rightEye","position":{"x":300.84717616218535,"y":40.335549766451464}},{"score":0.8914805054664612,"part":"leftEar","position":{"x":282.7686672581773,"y":42.73184195195657}},{"score":0.8008067607879639,"part":"rightEar","position":{"x":312.2041131401804,"y":44.720901845494154}},{"score":0.9981275200843811,"part":"leftShoulder","position":{"x":271.3707305076985,"y":80.99226584230416}},{"score":0.9981665015220642,"part":"rightShoulder","position":{"x":326.5236851139291,"y":81.48804551061491}},{"score":0.9942821264266968,"part":"leftElbow","position":{"x":255.11480243846137,"y":126.77525590829816}},{"score":0.9932594895362854,"part":"rightElbow","position":{"x":342.73076314963254,"y":124.95891959936239}},{"score":0.9602786302566528,"part":"leftWrist","position":{"x":250.9882056685273,"y":162.14808616192892}},{"score":0.9529159069061279,"part":"rightWrist","position":{"x":344.94159291783194,"y":161.35597698048394}},{"score":0.9993507266044617,"part":"leftHip","position":{"x":280.93188458750683,"y":174.73774606430112}},{"score":0.998979926109314,"part":"rightHip","position":{"x":316.42648309492415,"y":175.09939331767163}},{"score":0.998621940612793,"part":"leftKnee","position":{"x":265.5761316796685,"y":241.41154753094986}},{"score":0.9938617944717407,"part":"rightKnee","position":{"x":320.5119373603553,"y":241.78889530642027}},{"score":0.9271617531776428,"part":"leftAnkle","position":{"x":262.7514650218681,"y":294.7576753490166}},{"score":0.951892077922821,"part":"rightAnkle","position":{"x":328.855355377791,"y":299.975815234945}}]}'); //
 
 var currentpose = tpose1;
 var currentposeno = 1;
 var posematch = false; ////find angle 
 
-function findAngle(p1, p2, center) {
+function findAngleorg(p1, p2, center) {
   var b = Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2),
       a = Math.pow(p2.x - center.x, 2) + Math.pow(p2.y - center.y, 2),
       c = Math.pow(center.x - p1.x, 2) + Math.pow(center.y - p1.y, 2);
-  return Math.acos((a + b - c) / Math.sqrt(4 * a * b));
+  let ang = Math.acos((a + b - c) / Math.sqrt(4 * a * b));
+  console.log("angle==:  " + ang);
+  return ang;
+}
+
+function findAngle(p0, p1, c) {
+  var p0c = Math.sqrt(Math.pow(c.x - p0.x, 2) + Math.pow(c.y - p0.y, 2)); // p0->c (b)   
+
+  var p1c = Math.sqrt(Math.pow(c.x - p1.x, 2) + Math.pow(c.y - p1.y, 2)); // p1->c (a)
+
+  var p0p1 = Math.sqrt(Math.pow(p1.x - p0.x, 2) + Math.pow(p1.y - p0.y, 2)); // p0->p1 (c)
+
+  let ang = Math.cos((p1c * p1c + p0c * p0c - p0p1 * p0p1) / (2 * p1c * p0c)) * (180 / Math.PI);
+  console.log("angle==:  " + ang);
+  return ang;
+} //find angle 2.0
+
+
+function findAngleOld(p1, p2, center) {
+  var p1c = Math.sqrt(Math.pow(p1.x - center.x, 2) + Math.pow(p1.y - center.y, 2)),
+      p2c = Math.sqrt(Math.pow(p2.x - center.x, 2) + Math.pow(p2.y - center.y, 2)),
+      p1p2 = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+  let ang = Math.acos((p1c * p1c + p2c * p2c - p1p2 * p1p2) / Math.sqrt(2 * p1c * p2c));
+  console.log("angle==:  " + ang);
+  return ang;
 } ///compare segments
 
 
 function compareSegment(Segment1, Segment2) {
-  var angle1 = findAngle(Segment1[0].position, Segment1[1].position, Segment1[2].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
-  var angle2 = findAngle(Segment1[2].position, Segment1[1].position, Segment1[0].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
-  return angle1 + angle2;
-} ///compare between poses
+  var angle1 = findAngle(Segment1[0].position, Segment1[1].position, Segment1[2].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position); //  var angle2 = findAngle(Segment1[2].position, Segment1[1].position, Segment1[0].position) - findAngle(Segment2[0].position, Segment2[1].position, Segment2[2].position);
+  //
 
+  console.log("compare==:  " + angle1);
+  return angle1;
+}
+
+var errorMargin = 3; ///compare between poses
 
 function comparePose(pose1, pose2) {
   //convert pose to 3 point traingle
-  var headLeftHand = [pose1.keypoints[0], pose1.keypoints[7], pose1.keypoints[9]];
-  var headLeftHand2 = [pose2.keypoints[0], pose2.keypoints[7], pose2.keypoints[9]];
-  var headRightHand = [pose1.keypoints[0], pose1.keypoints[8], pose1.keypoints[10]];
-  var headRightHand2 = [pose2.keypoints[0], pose2.keypoints[8], pose2.keypoints[10]];
-  var leftArm = [pose1.keypoints[5], pose1.keypoints[7], pose1.keypoints[9]];
-  var leftArm2 = [pose2.keypoints[5], pose2.keypoints[7], pose2.keypoints[9]];
-  var rightArm = [pose1.keypoints[6], pose1.keypoints[8], pose1.keypoints[10]];
-  var rightArm2 = [pose2.keypoints[6], pose2.keypoints[8], pose2.keypoints[10]];
-  var leftLeg = [pose1.keypoints[11], pose1.keypoints[13], pose1.keypoints[15]];
-  var leftLeg2 = [pose2.keypoints[11], pose2.keypoints[13], pose2.keypoints[15]];
-  var rightLeg = [pose1.keypoints[12], pose1.keypoints[14], pose1.keypoints[16]];
-  var rightLeg2 = [pose2.keypoints[12], pose2.keypoints[14], pose2.keypoints[16]]; //compare traingls
+  var headLeftHand = [pose1.keypoints[5], pose1.keypoints[7], pose1.keypoints[0]];
+  var headLeftHand2 = [pose2.keypoints[5], pose2.keypoints[7], pose2.keypoints[0]];
+  var headRightHand = [pose1.keypoints[6], pose1.keypoints[8], pose1.keypoints[0]];
+  var headRightHand2 = [pose1.keypoints[6], pose1.keypoints[8], pose1.keypoints[0]];
+  var leftArm = [pose1.keypoints[5], pose1.keypoints[9], pose1.keypoints[7]];
+  var leftArm2 = [pose2.keypoints[5], pose2.keypoints[9], pose1.keypoints[7]];
+  var rightArm = [pose1.keypoints[6], pose1.keypoints[10], pose1.keypoints[8]];
+  var rightArm2 = [pose2.keypoints[6], pose2.keypoints[10], pose2.keypoints[8]];
+  var leftLeg = [pose1.keypoints[11], pose1.keypoints[15], pose1.keypoints[13]];
+  var leftLeg2 = [pose2.keypoints[11], pose2.keypoints[15], pose2.keypoints[13]];
+  var rightLeg = [pose1.keypoints[12], pose1.keypoints[16], pose1.keypoints[14]];
+  var rightLeg2 = [pose2.keypoints[12], pose2.keypoints[16], pose2.keypoints[14]]; //compare traingls
 
   var headLeft = compareSegment(headLeftHand, headLeftHand2);
   var headRight = compareSegment(headRightHand, headRightHand2);
@@ -38135,14 +38162,24 @@ function comparePose(pose1, pose2) {
   var legRight = compareSegment(rightLeg, rightLeg2);
   console.log("hl" + headLeft + "hr" + headRight + "armLeft" + armLeft + "armRight" + armRight + "legLeft" + legLeft + "legRight" + legRight); //test result to variable
 
+  let hl = -errorMargin < headLeft && headLeft < errorMargin;
+  let hr = -errorMargin < headRight && headRight < errorMargin;
+  let al = -errorMargin < armLeft && armLeft < errorMargin;
+  let ar = -errorMargin < armRight && armRight < errorMargin;
+  let ll = -errorMargin < legLeft && legLeft < errorMargin;
+  let lr = -errorMargin < legRight && legRight < errorMargin;
+  let t = false; //var pose = { "fullmatch":headLeft <1 && headRight <1&&armLeft <1&&armRight <1&&legLeft<1&&legRight<1,"HeadLeft": headLeft < 1, "HeadRight": headRight < 1, "LeftArm": armLeft < 1, "RightArm": armRight < 1, "LeftLeg": legLeft < 1, "RightLeg": legRight < 1 };
+
   var pose = {
-    "fullmatch": headLeft < 1 && headRight < 1 && armLeft < 1 && armRight < 1 && legLeft < 1 && legRight < 1,
-    "HeadLeft": headLeft < 1,
-    "HeadRight": headRight < 1,
-    "LeftArm": armLeft < 1,
-    "RightArm": armRight < 1,
-    "LeftLeg": legLeft < 1,
-    "RightLeg": legRight < 1
+    "fullmatch": hl == hr == al == ar == ar == ll == lr,
+    "hl": hl,
+    "HeadRight": headRight,
+    "HeadLeft": headLeft,
+    "LeftArm": armLeft,
+    "RightArm": armRight,
+    "LeftLeg": legLeft,
+    "RightLeg": legRight,
+    "errorMargin": errorMargin
   }; //return result
 
   return pose;
@@ -38237,8 +38274,25 @@ function detectPoseInRealTime(video, net) {
     ctx.translate(-videoWidth, 0); //imgt.src='assets\man-standing2.jpg';
 
     if (pose[0].score >= 0.75) {
-      let s = JSON.stringify(comparePose(currentpose, poses[0]));
+      let s = comparePose(currentpose, poses[0]);
       console.log(s);
+
+      if (s.fullmatch) {
+        console.log(s.fullmatch);
+
+        if (currentposeno == 2) {
+          currentpose = tpose1;
+          currentposeno = 1;
+          console.log("next pose 1");
+        } else if (currentposeno == 1) {
+          console.log("next pose 2");
+          currentpose = tpose2;
+          currentposeno = 2;
+        }
+
+        ctx.fillText("next pose", 10, 20, 400);
+      }
+
       ctx.fillText(JSON.stringify(s), 10, 20, 400);
     }
 
