@@ -38336,11 +38336,7 @@ async function start() {
   }
 
   detectPoseInRealTime(video, net);
-} // var ASSET_MANAGER= new AssetManager();
-// ASSET_MANAGER.downloadAll(function() {
-//   start();
-// });
-
+}
 
 start();
 },{"@tensorflow-models/posenet":"node_modules/@tensorflow-models/posenet/dist/posenet.esm.js","@tensorflow/tfjs":"node_modules/@tensorflow/tfjs/dist/tf.esm.js","./demo_util":"demo_util.js"}]},{},["multipose.js"], null)

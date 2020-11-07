@@ -258,10 +258,7 @@ export async function start() {
   detectPoseInRealTime(video, net);
 }
 
-// var ASSET_MANAGER= new AssetManager();
-// ASSET_MANAGER.downloadAll(function() {
-//   start();
-// });
+
 
 
 start();
