@@ -189,9 +189,12 @@ function detectPoseInRealTime(video, net) {
     ctx.scale(-1, 1);
     ctx.translate(-videoWidth, 0);
     ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
-    if (currentposeno == 1) { ctx.drawImage(imageElement1, 0, 0, 100, 200); }
-    else if (currentposeno == 2) { ctx.drawImage(imageElement2, 0, 0, 100, 200); }
-
+    ctx.globalAlpha = 0.6;
+    if (currentposeno == 1) {
+      
+      ctx.drawImage(imageElement1,150, 20, 100, 200); }
+    else if (currentposeno == 2) { ctx.drawImage(imageElement2, 150, 20, 100, 200); }
+    ctx.globalAlpha = 1;
     ctx.scale(-1, 1);
     ctx.translate(-videoWidth, 0);
 
